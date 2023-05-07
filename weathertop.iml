@@ -16,8 +16,7 @@
         <orderEntry type="module-library">
             <library name="Project Libraries">
                 <CLASSES>
-                    <root url="file://$MODULE_DIR$/lib" />
-                    <root url="file://$MODULE_DIR$/../../../../dev/play-1.6.0/modules/docviewer/lib"/>
+                                        <root url="file://$MODULE_DIR$/../../../../dev/play-1.6.0/modules/docviewer/lib"/>
 
                 </CLASSES>
                 <JAVADOC />
