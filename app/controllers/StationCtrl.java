@@ -15,4 +15,14 @@ public class StationCtrl extends Controller
         Logger.info ("Station id = " + id);
         render("station.html", station);
     }
+    public static void deletereading(Long id, Long readingid)
+    {
+        Station station = Station.findById(id);
+        Reading reading = Reading.findById(readingid);
+        Logger.info ("Removing" + reading.id);
+        station.readings.remove(reading);
+        station.save();
+        reading.delete();
+        render("station.html", station);
+    }
 }

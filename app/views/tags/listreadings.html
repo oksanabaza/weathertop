@@ -6,6 +6,7 @@
     <th>Temperature</th>
     <th>Wind Speed</th>
     <th>Pressure</th>
+    <th>Options</th>
   </tr>
   </thead>
   <tbody>
@@ -23,6 +24,9 @@
     </td>
     <td>
       ${reading.pressure}
+    </td>
+    <td>
+      <a href="/stations/${_station.id}/deletereading/${reading.id}" class="button is-danger">Delete Reading</a>
     </td>
   </tr>
   #{/list}
