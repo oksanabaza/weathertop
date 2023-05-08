@@ -25,4 +25,12 @@ public class StationCtrl extends Controller
         reading.delete();
         render("station.html", station);
     }
+    public static void addReading(Long id, int code, int temperature, int windSpeed, int windDirection, int pressure)
+    {
+        Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure);
+        Station station = Station.findById(id);
+        station.readings.add(reading);
+        station.save();
+        redirect ("/stations/" + id);
+    }
 }

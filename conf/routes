@@ -10,6 +10,7 @@ GET     /admin                                      Admin.index
 GET     /stations/{id}                              StationCtrl.index
 GET     /stations/{id}/deletereading/{readingid}    StationCtrl.deleteReading
 GET     /dashboard/deleteStation/{id}               Dashboard.deleteStation
+POST    /stations/{id}/addreading                   StationCtrl.addReading
 
 
 
