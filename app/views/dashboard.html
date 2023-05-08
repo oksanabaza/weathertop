@@ -8,7 +8,14 @@
     <h1 class="title">
         ${station.name}
     </h1>
-<p><a href="/stations/${station.id}">View</a></p>
-<!--    #{listreadings station:station/}-->
+    <span class="icon">
+    <a href="/stations/${station.id}" class="icon has-text-primary">
+        <i class="fas fa-folder">view</i>
+    </a></span>
+    <a href="/dashboard/deleteStation/${station.id}" class="icon has-text-danger">
+        <i class="fas fa-trash">trash</i>
+    </a>
+
+    <!--    #{listreadings station:station/}-->
 </div>
 #{/list}
