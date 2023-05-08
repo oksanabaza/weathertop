@@ -7,7 +7,7 @@ GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
-GET     /station/{id}                           StationCtrl.index
+GET     /stations/{id}                           StationCtrl.index
 
 
 # Ignore favicon requests
