@@ -22,6 +22,12 @@ Reading(r4):
   windSpeed: 3.5
   windDirection: 120
   pressure: 999
+Reading(r5):
+  code: 300
+  temperature: 3.5
+  windSpeed: 3.3
+  windDirection: 330
+  pressure: 333
 
 Station(s1):
   name: Tramore
@@ -34,3 +40,7 @@ Station(s2):
   readings:
     - r3
     - r4
+Station(s3):
+  name: Kilkenny
+  readings:
+    - r5
