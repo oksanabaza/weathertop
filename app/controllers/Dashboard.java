@@ -18,4 +18,11 @@ public class Dashboard extends Controller
     List<Station> stations = Station.findAll();
     render ("dashboard.html", stations);
   }
+  public static void deleteStation (Long id)
+  {
+    Station station = Station.findById(id);
+    Logger.info ("Removing" + station.name);
+    station.delete();
+    redirect ("/dashboard");
+  }
 }

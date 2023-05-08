@@ -8,7 +8,8 @@ GET     /dashboard                                  Dashboard.index
 GET     /about                                      About.index
 GET     /admin                                      Admin.index
 GET     /stations/{id}                              StationCtrl.index
-GET     /stations/{id}/deletereading/{readingid}   StationCtrl.deleteReading
+GET     /stations/{id}/deletereading/{readingid}    StationCtrl.deleteReading
+GET     /dashboard/deleteStation/{id}               Dashboard.deleteStation
 
 
 
