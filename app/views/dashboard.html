@@ -3,11 +3,12 @@
 
 #{menu id:"dashboard"/}
 
-<section class="ui segment">
-
-</section>
+#{list items:stations, as:'station'}
 <div class="content box">
-  <h1 class="title">
-   Dashboard of ${station.name}</h1>
-  #{listsongs station:station/}
+    <h1 class="title">
+        ${station.name}
+    </h1>
+
+    #{listsongs station:station/}
 </div>
+#{/list}
