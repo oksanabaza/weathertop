@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35f6b079-199a-4db3-ad9b-4c07281287b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/Accounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tags/welcomemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1001$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1001$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1001.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1001.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1005$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1005$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1005.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1005.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1006$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1006$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1006.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1006.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1008$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1008$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1008.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1008.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tags/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template_1000$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000$_run_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template_1000.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1000.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_start.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weathertop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weathertop.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
