@@ -13,7 +13,9 @@
             <th>Code</th>
             <th>Temperature</th>
             <th>Wind Speed</th>
+            <th>Wind Direction</th>
             <th>Pressure</th>
+
         </tr>
         </thead>
         <tbody>
@@ -29,8 +31,12 @@
                 ${reading.windSpeed}
             </td>
             <td>
+                ${reading.windDirection}
+            </td>
+            <td>
                 ${reading.pressure}
             </td>
+
         </tr>
         #{/list}
         </tbody>
