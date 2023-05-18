@@ -1,7 +1,7 @@
 <table class="table">
   <thead>
   <tr>
-
+    <th>Date</th>
     <th>Code</th>
     <th>Temperature</th>
     <th>Wind Speed</th>
@@ -13,7 +13,9 @@
   <tbody>
   #{list items:_station.readings, as:'reading'}
   <tr>
-
+    <td>
+      ${reading.date}
+    </td>
     <td>
       ${reading.code}
     </td>
@@ -29,6 +31,7 @@
     <td>
       ${reading.pressure}
     </td>
+
     <td>
       <a href="/stations/${_station.id}/deletereading/${reading.id}" class="button is-danger">Delete Reading</a>
     </td>

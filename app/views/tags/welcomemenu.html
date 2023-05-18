@@ -1,16 +1,41 @@
-<nav class="navbar is-info is-inverted">
+<nav class="navbar is-info is-inverted" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a id="start" class="navbar-item" href="/"> Weathertop App </a>
+        <a id="start" class="navbar-item" href="/">Weathertop App</a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
-    <div class="navbar-menu">
+    <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-            <a id="signup" class="navbar-item" href="/signup">Signup </a>
-            <a id="login" class="navbar-item" href="/login">Login </a>
-
+            <a id="signup" class="navbar-item" href="/signup">
+                  <span class="icon">
+        <i class="fas fa-user-plus"></i>
+            <a id="login" class="navbar-item" href="/login">
+                     <span class="icon">
+<!--<i class="fas fa-users"></i>-->
+                         <i class="fas fa-sign-in-alt"></i>
+                     </span>
+            </a>
         </div>
     </div>
 </nav>
 
 <script>
-  $("#${_id}").addClass("has-background-white has-text-black");
+    document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach($el => {
+                $el.addEventListener('click', () => {
+                    const target = $el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
 </script>
