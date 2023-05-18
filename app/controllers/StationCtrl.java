@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Date;
 import java.util.List;
 
 import models.Station;
@@ -25,12 +26,17 @@ public class StationCtrl extends Controller
         reading.delete();
         render("station.html", station);
     }
-    public static void addReading(Long id, int code, int temperature, int windSpeed, int windDirection, int pressure)
-    {
-        Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure);
+    public static void addReading(Long id, int code, int temperature, int windSpeed, int windDirection, int pressure) {
+        // Remove milliseconds from the current time
+        Date date = new Date();
+        date.setTime(date.getTime() / 1000L * 1000L);
+
+        int fTemperature = temperature * 9/5 +32;
+
+        Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure, date);
         Station station = Station.findById(id);
         station.readings.add(reading);
         station.save();
-        redirect ("/stations/" + id);
+        redirect("/stations/" + id);
     }
 }

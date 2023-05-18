@@ -1,10 +1,26 @@
 <form action="/dashboard/addstation" method="POST">
+    <div class="addstation-wrapper">
     <div class="field">
         <label class="label">Name</label>
         <div class="control">
             <input class="input" placeholder="Name" type="text" name="name">
         </div>
     </div>
+
+    <div class="field">
+        <label class="label">Latitude</label>
+        <div class="control">
+            <input class="input" placeholder="Latitude"  name="latitude">
+        </div>
+    </div>
+        <div class="field">
+            <label class="label">Longitude</label>
+            <div class="control">
+                <input class="input" placeholder="Longitude"  name="longitude">
+            </div>
+        </div>
+    </div>
+
     <div class="field mt-4">
         <button class="button is-info">Add Station</button>
     </div>

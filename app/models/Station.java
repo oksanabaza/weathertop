@@ -13,6 +13,8 @@ import play.db.jpa.Model;
 public class Station extends Model
 {
     public String name;
+    public double latitude;
+    public double longitude;
     @OneToMany(cascade = CascadeType.ALL)
     public List<Reading> readings = new ArrayList<Reading>();
     public String trend;
@@ -24,10 +26,14 @@ public class Station extends Model
     public double minWindSpeed;
     public double maxPressure;
     public double minPressure;
+    public double latestTemperature;
+    public double fLatestTemperature;
 
-    public Station(String name)
+    public Station(String name, double latitude, double longitude)
     {
         this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.trend = trend;
         this.maxTemperature = maxTemperature;
         this.minTemperature = minTemperature;
@@ -37,6 +43,10 @@ public class Station extends Model
         this.minPressure=minPressure;
         this.windTrend = windTrend;
         this.pressureTrend = pressureTrend;
+        this.latestTemperature = latestTemperature;
+        this.fLatestTemperature = fLatestTemperature;
     }
+
+
 }
 

@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'About' /}
+
+#{menu id:"about"/}
+
+<div class="content box">
+    <p class="title">
+     Edit Account Info ${member.id}
+    </p>
+    <form action="/member/{id}" method="POST">
+    <div class="field">
+        <label class="label">Member name</label>
+        <div class="control">
+            <input class="input" value=${member.firstname}  name="name">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Member lastname</label>
+        <div class="control">
+            <input class="input" value=${member.lastname}  name="lastname">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Member email</label>
+        <div class="control">
+            <input class="input" value=${member.email}  name="email">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Member password</label>
+        <div class="control">
+            <input class="input" value=${member.password}  name="password">
+        </div>
+    </div>
+        <div class="field mt-4">
+            <button class="button is-info">Submit</button>
+        </div>
+    </form>
+</div>

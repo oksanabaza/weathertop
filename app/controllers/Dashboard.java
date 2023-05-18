@@ -10,6 +10,7 @@ import play.Logger;
 import play.mvc.Controller;
 
 
+
 public class Dashboard extends Controller
 {
   public static void index() {
@@ -109,6 +110,12 @@ public class Dashboard extends Controller
       station.minWindSpeed = minWindSpeed;
       station.maxPressure = maxPressure;
       station.minPressure = minPressure;
+      //latest temperature
+      int lastItem = readings.size() - 1;
+      station.latestTemperature = readings.get(lastItem).temperature;
+      //latest farinheit temperature
+      station.fLatestTemperature = station.latestTemperature * 9/5 + 32;
+
     }
 
     render("dashboard.html", stations);
@@ -125,11 +132,11 @@ public class Dashboard extends Controller
     station.delete();
     redirect ("/dashboard");
   }
-  public static void addStation (String name)
+  public static void addStation (String name, double longitude, double latitude)
   {
     Logger.info("Adding a Playlist");
     Member member = Accounts.getLoggedInMember();
-    Station station = new Station (name);
+    Station station = new Station (name, longitude, latitude);
     member.stations.add(station);
     member.save();
     redirect ("/dashboard");

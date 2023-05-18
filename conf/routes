@@ -13,12 +13,15 @@ GET    /logout                                      Accounts.logout
 
 GET     /dashboard                                  Dashboard.index
 GET     /about                                      About.index
+GET     /member                                     MemberInfo.index
 GET     /admin                                      Admin.index
 GET     /stations/{id}                              StationCtrl.index
 GET     /stations/{id}/deletereading/{readingid}    StationCtrl.deleteReading
 GET     /dashboard/deleteStation/{id}               Dashboard.deleteStation
 POST    /stations/{id}/addreading                   StationCtrl.addReading
 POST    /dashboard/addstation                       Dashboard.addStation
+POST     /member/{id}                               MemberInfo.edit
+
 
 
 # Ignore favicon requests

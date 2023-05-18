@@ -6,9 +6,78 @@
 #{list items:stations, as:'station'}
 <div class="content box dashboard">
     <div>
-        <h1 class="title">
-            ${station.name}
-        </h1>
+<!--        <h1 class="title">-->
+<!--            ${station.name}-->
+<!--        </h1>-->
+<!--<div>-->
+<!--    ${station.latitude}-->
+<!--</div>-->
+<!--        <div>-->
+<!--            ${station.longitude}-->
+<!--        </div>-->
+<!--        start of card-->
+        <div class="card-wrapper">
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                                <h1 class="title">
+                                    ${station.name}
+                                </h1>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">${station.latitude}</p>
+                        <p class="subtitle is-6">${station.longitude}</p>
+                    </div>
+                </div>
+
+<!--                <div class="content">-->
+<!--                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+<!--                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.-->
+<!--                    <a href="#">#css</a> <a href="#">#responsive</a>-->
+<!--                    <br>-->
+<!--                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>-->
+<!--                </div>-->
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div>Temperature: ${station.trend}</div>
+<div>C ${station.latestTemperature}</div>
+                <div>F ${station.fLatestTemperature}</div>
+                <div>Max Temperature: ${station.maxTemperature}</div>
+                <div>Min Temperature: ${station.minTemperature}</div>
+                <div class="trend-icon">
+                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.trend == 'Rising' ? 'inline' : 'none'}"></i>
+                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.trend == 'Dropping' ? 'inline' : 'none'}"></i>
+                    <i class="fas fa-circle has-text-info" style="display: ${station.trend != 'Rising' && station.trend != 'Dropping' ? 'inline' : 'none'}"></i>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-content">
+                <div>Temperature: ${station.trend}</div>
+                <div>Max Temperature: ${station.maxTemperature}</div>
+                <div>Min Temperature: ${station.minTemperature}</div>
+                <div class="trend-icon">
+                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.trend == 'Rising' ? 'inline' : 'none'}"></i>
+                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.trend == 'Dropping' ? 'inline' : 'none'}"></i>
+                    <i class="fas fa-circle has-text-info" style="display: ${station.trend != 'Rising' && station.trend != 'Dropping' ? 'inline' : 'none'}"></i>
+                </div>
+            </div></div>
+            <div class="card">
+                <div class="card-content">
+
+                    <div>Pressure: ${station.pressureTrend}</div>
+                    <div>Max Pressure: ${station.maxPressure}</div>
+                    <div>Min Pressure: ${station.minPressure}</div>
+                    <div class="trend-icon">
+                        <i class="fas fa-arrow-up has-text-success" style="display: ${station.pressureTrend == 'Rising' ? 'inline' : 'none'}"></i>
+                        <i class="fas fa-arrow-down has-text-danger" style="display: ${station.pressureTrend == 'Dropping' ? 'inline' : 'none'}"></i>
+                        <i class="fas fa-circle has-text-info" style="display: ${station.pressureTrend != 'Rising' && station.pressureTrend != 'Dropping' ? 'inline' : 'none'}"></i>
+                    </div>
+                     </div></div>
+        </div>
+<!--        end of card-->
         <span class="icon">
             <a href="/stations/${station.id}" class="icon has-text-primary">
                 <i class="fas fa-folder">view</i>
@@ -19,53 +88,53 @@
         </a>
     </div>
 
-    <div class="dashboard-child">
-        <div class="card purple-bg">
-            <div class="card-content">
-                <div>Temperature Trend</div>
-                <div>${station.trend}</div>
-                <div>Max Temperature: ${station.maxTemperature}</div>
-                <div>Min Temperature: ${station.minTemperature}</div>
-                <div class="trend-icon">
-                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.trend == 'Rising' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.trend == 'Dropping' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-circle has-text-info" style="display: ${station.trend != 'Rising' && station.trend != 'Dropping' ? 'inline' : 'none'}"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="dashboard-child">-->
+<!--        <div class="card purple-bg">-->
+<!--            <div class="card-content">-->
+<!--                <div>Temperature Trend</div>-->
+<!--                <div>${station.trend}</div>-->
+<!--                <div>Max Temperature: ${station.maxTemperature}</div>-->
+<!--                <div>Min Temperature: ${station.minTemperature}</div>-->
+<!--                <div class="trend-icon">-->
+<!--                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.trend == 'Rising' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.trend == 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-circle has-text-info" style="display: ${station.trend != 'Rising' && station.trend != 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="dashboard-child">
-        <div class="card orange-bg">
-            <div class="card-content">
-                <div>Wind Trend</div>
-                <div>${station.windTrend}</div>
-                <div>Max Wind: ${station.maxWindSpeed}</div>
-                <div>Min Wind: ${station.minWindSpeed}</div>
-                <div class="trend-icon">
-                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.windTrend == 'Rising' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.windTrend == 'Dropping' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-circle has-text-info" style="display: ${station.windTrend != 'Rising' && station.windTrend != 'Dropping' ? 'inline' : 'none'}"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="dashboard-child">-->
+<!--        <div class="card orange-bg">-->
+<!--            <div class="card-content">-->
+<!--                <div>Wind Trend</div>-->
+<!--                <div>${station.windTrend}</div>-->
+<!--                <div>Max Wind: ${station.maxWindSpeed}</div>-->
+<!--                <div>Min Wind: ${station.minWindSpeed}</div>-->
+<!--                <div class="trend-icon">-->
+<!--                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.windTrend == 'Rising' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.windTrend == 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-circle has-text-info" style="display: ${station.windTrend != 'Rising' && station.windTrend != 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="dashboard-child">
-        <div class="card purple-bg">
-            <div class="card-content">
-                <div>Pressure Trend</div>
-                <div>${station.pressureTrend}</div>
-                <div>Max Pressure: ${station.maxPressure}</div>
-                <div>Min Pressure: ${station.minPressure}</div>
-                <div class="trend-icon">
-                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.pressureTrend == 'Rising' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.pressureTrend == 'Dropping' ? 'inline' : 'none'}"></i>
-                    <i class="fas fa-circle has-text-info" style="display: ${station.pressureTrend != 'Rising' && station.pressureTrend != 'Dropping' ? 'inline' : 'none'}"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="dashboard-child">-->
+<!--        <div class="card purple-bg">-->
+<!--            <div class="card-content">-->
+<!--                <div>Pressure Trend</div>-->
+<!--                <div>${station.pressureTrend}</div>-->
+<!--                <div>Max Pressure: ${station.maxPressure}</div>-->
+<!--                <div>Min Pressure: ${station.minPressure}</div>-->
+<!--                <div class="trend-icon">-->
+<!--                    <i class="fas fa-arrow-up has-text-success" style="display: ${station.pressureTrend == 'Rising' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-arrow-down has-text-danger" style="display: ${station.pressureTrend == 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                    <i class="fas fa-circle has-text-info" style="display: ${station.pressureTrend != 'Rising' && station.pressureTrend != 'Dropping' ? 'inline' : 'none'}"></i>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </div>
 #{/list}
