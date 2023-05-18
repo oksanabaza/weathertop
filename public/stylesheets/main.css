@@ -1,4 +1,8 @@
-$primary: 'red';
+.header-wrapper{
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
 .dashboard{
 display:flex;
 }
