@@ -34,41 +34,30 @@ public class Dashboard extends Controller
         } else {
           station.trend = "Unchanged";
         }
-      } else {
-        station.trend = "N/A";
-      }
-      ////wind trends
-      if (numReadings >= 3) {
-        Reading lastReading = readings.get(numReadings - 1);
-        Reading secondLastReading = readings.get(numReadings - 2);
-        Reading thirdLastReading = readings.get(numReadings - 3);
 
+        // Wind trends
         if (lastReading.windSpeed > secondLastReading.windSpeed && secondLastReading.windSpeed > thirdLastReading.windSpeed) {
-          station.trend = "Rising";
+          station.windTrend = "Rising";
         } else if (lastReading.windSpeed < secondLastReading.windSpeed && secondLastReading.windSpeed < thirdLastReading.windSpeed) {
           station.windTrend = "Dropping";
         } else {
           station.windTrend = "Unchanged";
         }
-      } else {
-        station.windTrend = "N/A";
-      }
-      /////
-      if (numReadings >= 3) {
-        Reading lastReading = readings.get(numReadings - 1);
-        Reading secondLastReading = readings.get(numReadings - 2);
-        Reading thirdLastReading = readings.get(numReadings - 3);
 
+        // Pressure trends
         if (lastReading.pressure > secondLastReading.pressure && secondLastReading.pressure > thirdLastReading.pressure) {
-          station.trend = "Rising";
+          station.pressureTrend = "Rising";
         } else if (lastReading.pressure < secondLastReading.pressure && secondLastReading.pressure < thirdLastReading.pressure) {
           station.pressureTrend = "Dropping";
         } else {
           station.pressureTrend = "Unchanged";
         }
       } else {
+        station.trend = "N/A";
+        station.windTrend = "N/A";
         station.pressureTrend = "N/A";
       }
+
       // Find maximum and minimum values for temperature, wind speed, and pressure
       double maxTemperature = Double.MIN_VALUE;
       double minTemperature = Double.MAX_VALUE;
@@ -110,16 +99,20 @@ public class Dashboard extends Controller
       station.minWindSpeed = minWindSpeed;
       station.maxPressure = maxPressure;
       station.minPressure = minPressure;
-      //latest temperature
-      int lastItem = readings.size() - 1;
-      station.latestTemperature = readings.get(lastItem).temperature;
-      //latest farinheit temperature
-      station.fLatestTemperature = station.latestTemperature * 9/5 + 32;
 
+      // Latest temperature
+      int lastItem = readings.size() - 1;
+      if (lastItem >= 0) {
+        station.latestTemperature = readings.get(lastItem).temperature;
+        // Latest Fahrenheit temperature
+        station.fLatestTemperature = station.latestTemperature * 9 / 5 + 32;
+      }
     }
 
-    render("dashboard.html", stations);
+    render("dashboard.html", stations, member);
+
   }
+
 
 
   public static void deleteStation (Long id)

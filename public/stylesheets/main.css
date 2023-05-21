@@ -1,11 +1,41 @@
-$primary: 'red';
+.header-wrapper{
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
 .dashboard{
-display:flex;
+display:grid;
 }
+a{
+color:#faa41a;
+}
+a:hover{
+color:#302850;
+background-color:#faa41a;
+}
+.nav{
+background-color:#302850;
+}
+.navbar.is-info{
 
-body{
-background-color:red;
+color: #faa41a;
+background-color:#302850;
 }
+#navbarMenu a{
+color: #faa41a;
+background-color:#302850;
+}
+#navbarMenu a:hover{
+color:#302850;
+background-color:#faa41a;
+}
+.button.is-info{
+color:#302850;
+background-color:#faa41a;
+}
+.button.is-info:hover{
+color:#faa41a;
+background-color:#302850;}
 .hero .hero-body{
 color: #faa41a;
 background-color:#302850;
@@ -112,6 +142,16 @@ width:30%;
 }
 .card-wrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+}
+.card{
+background-color: #302850;
+  color:#faa41a;
+}
+.card h1 {
+ color:#faa41a;
+}
+.card p{
+ color:#faa41a;
 }

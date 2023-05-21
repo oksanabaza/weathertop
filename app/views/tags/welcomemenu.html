@@ -1,6 +1,16 @@
-<nav class="navbar is-info is-inverted" role="navigation" aria-label="main navigation">
+<div class="nav">
+<nav class="navbar is-info is-inverted container" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a id="start" class="navbar-item" href="/">Weathertop App</a>
+<!--        <a id="start" class="navbar-item" href="/">Weathertop App</a>-->
+        <div>
+            #{if member}
+            hello,Oksi
+            #{/if}
+            #{else}
+            <h1>plese login</h1>
+
+            #{/else}
+        </div>
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -20,8 +30,10 @@
             </a>
         </div>
     </div>
-</nav>
 
+
+</nav>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);

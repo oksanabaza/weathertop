@@ -38,6 +38,11 @@ public class Member extends Model
         return this.password.equals(password);
     }
 
+
     public void edit(String firstname, String lastname, String email, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.password = password;
     }
 }

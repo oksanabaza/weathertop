@@ -5,12 +5,12 @@ import play.mvc.*;
 import java.util.*;
 import models.*;
 
-public class About extends Controller
+public class Menu extends Controller
 {
     public static void index() {
-        Logger.info("Rendering about");
+        Logger.info("Rendering member");
         Member member = Accounts.getLoggedInMember();
-        render ("about.html", member);
+        render ("tags/menu.html", member);
     }
 }
 
