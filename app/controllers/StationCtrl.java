@@ -33,6 +33,7 @@ public class StationCtrl extends Controller
 
         int fTemperature = temperature * 9/5 +32;
 
+
         Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure, date);
         Station station = Station.findById(id);
         station.readings.add(reading);

@@ -1,3 +1,4 @@
+
 .header-wrapper{
 display: flex;
 justify-content:space-between;
@@ -20,6 +21,15 @@ background-color:#302850;
 
 color: #faa41a;
 background-color:#302850;
+}
+.navbar-brand{
+align-items: center;
+}
+.nav{
+margin-bottom: 30px;
+}
+footer{
+margin-top: 30px;
 }
 #navbarMenu a{
 color: #faa41a;
@@ -142,8 +152,9 @@ width:30%;
 }
 .card-wrapper{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 10px;
+  white-space: nowrap;
 }
 .card{
 background-color: #302850;
@@ -155,3 +166,30 @@ background-color: #302850;
 .card p{
  color:#faa41a;
 }
+.back-btn{
+color:#faa41a;
+margin:20px 0;
+}
+.back-btn a:hover{
+background-color:transparent;
+}
+a#dashboard.navbar-item.is-active{
+    color: #302850;
+    background-color: #faa41a;
+}
+a#admin.navbar-item.is-active{
+    color: #302850;
+    background-color: #faa41a;
+}
+a#about.navbar-item.is-active{
+    color: #302850;
+    background-color: #faa41a;
+}
+.navbar-menu{
+padding:0}
+.card-content h1{
+text-size-adjust: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem 0;
+    }
