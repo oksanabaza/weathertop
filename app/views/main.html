@@ -15,15 +15,53 @@
     <div class="hero-body ">
         <div class="container header-wrapper">
             <p class="title ">
-                Welcome to the WeatherTop
-            </p>
-            <div>
 
-            </div>
+                Welcome to the WeatherTop
+
+            </p>
+
         </div>
     </div>
 </div>
-<section class="box container">
+#{if member}
+<div class="nav">
+    <nav class="navbar is-info container" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="/member">
+                #{if member}
+                ${member.firstname}
+                #{/if}
+                #{else}
+                Please log in
+                #{/else}
+
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+
+                <a id="admin" class="navbar-item" href="/admin">Admin</a>
+                <a id="dashboard" class="navbar-item" href="/dashboard">Dashboard</a>
+                <a id="about" class="navbar-item" href="/about">About</a>
+                <a id="logout" class="navbar-item" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+</div>
+#{/if}
+#{else}
+
+#{/else}
+
+
+<section class="">
+
     #{doLayout /}
 </section>
 <footer class="footer box">

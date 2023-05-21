@@ -11,6 +11,7 @@ public class MemberInfo extends Controller
     public static void index() {
    models.Member member = Accounts.getLoggedInMember();
    render("member.html", member);
+
     }
 
     public static void edit(String firstname, String lastname, String email, String password) {
@@ -18,8 +19,8 @@ public class MemberInfo extends Controller
         member.edit(firstname, lastname, email, password);
         member.save();
         Logger.info(String.valueOf(member));
-        render("member.html", member);
 
+        render("member.html", member);
     }
 
 }
