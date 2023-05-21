@@ -19,9 +19,38 @@
             </div>
             <div class="card">
                 <div class="card-content">
-                    <h1> Weather</h1>
+                    <h1>Weather</h1>
+                    <div class="weather-icon">
+                        #{if station.latestCode == 100}
+                        <img alt="clear" src="../../public/images/sun.png"/>
+                        #{/if}
+                        #{if station.latestCode == 200}
+                        <img alt="partial clouds" src="../../public/images/cloud.png"/>
+                        #{/if}
+                        #{if station.latestCode == 300}
+                        <img alt="cloudy" src="../../public/images/cloud-nosun.png"/>
+                        #{/if}
+                        #{if station.latestCode == 400}
+                        <img alt="light showers" src="../../public/images/cloudy.png"/>
+                        #{/if}
+                        #{if station.latestCode == 500}
+                        <img alt="heavy showers" src="../../public/images/rain.png"/>
+                        #{/if}
+                        #{if station.latestCode == 600}
+                        <img alt="rain" src="../../public/images/rain.png"/>
+                        #{/if}
+                        #{if station.latestCode == 700}
+                        <img alt="snow" src="../../public/images/snow.png"/>
+                        #{/if}
+                        #{if station.latestCode == 800}
+                        <img alt="thunder" alt="snow" src="../../public/images/lightning.png"/>
+                        #{/if}
+                        #{else}
+                        #{/else}
                 </div>
             </div>
+        </div>
+<!--        -->
             <div class="card">
                 <div class="card-content">
                     <div class="card-header">
@@ -70,6 +99,7 @@
                     </div>
                     <div class="card-bottom">
                         <div>
+                    <div>${station.latestPressure} hpa</div>
                     <div>Max: ${station.maxPressure}</div>
                     <div>Min: ${station.minPressure}</div>
                         </div>

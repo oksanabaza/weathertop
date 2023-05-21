@@ -249,3 +249,9 @@ a#about.navbar-item.is-active {
     display: grid;
     justify-content: center;
 }
+.weather-icon {
+    display:grid;
+}
+.weather-icon img{
+    width: 30%;
+}

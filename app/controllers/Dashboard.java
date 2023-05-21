@@ -107,6 +107,11 @@ public class Dashboard extends Controller
         station.latestTemperature = readings.get(lastItem).temperature;
         // Latest Fahrenheit temperature
         station.fLatestTemperature = station.latestTemperature * 9 / 5 + 32;
+        station.latestCode = readings.get(lastItem).code;
+        station.latestPressure = readings.get(lastItem).pressure;
+        station.latestWindSpeed = readings.get(lastItem).windSpeed;
+        station.latestWindDirection = readings.get(lastItem).windDirection;
+
 
       }
 
