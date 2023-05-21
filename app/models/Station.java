@@ -29,6 +29,8 @@ public class Station extends Model
     public double latestTemperature;
     public double fLatestTemperature;
 
+
+
     public Station(String name, double latitude, double longitude)
     {
         this.name = name;
@@ -45,6 +47,10 @@ public class Station extends Model
         this.pressureTrend = pressureTrend;
         this.latestTemperature = latestTemperature;
         this.fLatestTemperature = fLatestTemperature;
+
+
+
+
     }
 
 

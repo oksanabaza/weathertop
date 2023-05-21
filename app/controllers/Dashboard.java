@@ -58,7 +58,7 @@ public class Dashboard extends Controller
         station.pressureTrend = "N/A";
       }
 
-      // Find maximum and minimum values for temperature, wind speed, and pressure
+      // set default value
       double maxTemperature = 00.00;
       double minTemperature = 00.00;
       double maxWindSpeed = 00.00;
@@ -103,10 +103,13 @@ public class Dashboard extends Controller
       // Latest temperature
       int lastItem = readings.size() - 1;
       if (lastItem >= 0) {
+        //latest temperature
         station.latestTemperature = readings.get(lastItem).temperature;
         // Latest Fahrenheit temperature
         station.fLatestTemperature = station.latestTemperature * 9 / 5 + 32;
+
       }
+
     }
 
     render("dashboard.html", stations, member);
