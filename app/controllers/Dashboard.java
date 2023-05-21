@@ -58,17 +58,17 @@ public class Dashboard extends Controller
         station.pressureTrend = "N/A";
       }
 
-      // Find maximum and minimum values for temperature, wind speed, and pressure
-      double maxTemperature = Double.MIN_VALUE;
-      double minTemperature = Double.MAX_VALUE;
-      double maxWindSpeed = Double.MIN_VALUE;
-      double minWindSpeed = Double.MAX_VALUE;
-      double maxPressure = Double.MIN_VALUE;
-      double minPressure = Double.MAX_VALUE;
+      // set default value
+      double maxTemperature = 00.00;
+      double minTemperature = 00.00;
+      double maxWindSpeed = 00.00;
+      double minWindSpeed = 00.00;
+      double maxPressure = 00.00;
+      double minPressure = 00.00;
 
       for (Reading reading : readings) {
         double temperature = reading.temperature;
-        double windSpeed = reading.windSpeed;
+        int windSpeed = (int) reading.windSpeed;
         double pressure = reading.pressure;
 
         if (temperature > maxTemperature) {
@@ -95,18 +95,112 @@ public class Dashboard extends Controller
 
       station.maxTemperature = maxTemperature;
       station.minTemperature = minTemperature;
-      station.maxWindSpeed = maxWindSpeed;
-      station.minWindSpeed = minWindSpeed;
+      station.maxWindSpeed = (int) maxWindSpeed;
+      station.minWindSpeed = (int) minWindSpeed;
       station.maxPressure = maxPressure;
       station.minPressure = minPressure;
 
       // Latest temperature
       int lastItem = readings.size() - 1;
       if (lastItem >= 0) {
+        //latest temperature
         station.latestTemperature = readings.get(lastItem).temperature;
         // Latest Fahrenheit temperature
         station.fLatestTemperature = station.latestTemperature * 9 / 5 + 32;
+        station.latestCode = readings.get(lastItem).code;
+        station.latestPressure = readings.get(lastItem).pressure;
+        station.latestWindSpeed = (int) readings.get(lastItem).windSpeed;
+        station.latestWindDirection = readings.get(lastItem).windDirection;
+        // Calculate wind chill with rounded result
+        double windChill = 13.12 + 0.6215 * station.latestTemperature - 11.37 * Math.pow(station.latestWindSpeed, 0.16) + 0.3965 * station.latestTemperature * Math.pow(station.latestWindSpeed, 0.16);
+
+        // Round wind chill to 2 decimal places
+        double roundedWindChill = Math.round(windChill * 100.0) / 100.0;
+
+        // Assign rounded wind chill to station
+        station.windChill = roundedWindChill;
+
+        // Apply windSpeed value based on conditions
+        int windSpeed = station.latestWindSpeed;
+        int windSpeedValue = 0;
+
+        if (windSpeed == 1) {
+          windSpeedValue = 0;
+        } else if (windSpeed >= 1 && windSpeed <= 5) {
+          windSpeedValue = 1;
+        } else if (windSpeed >= 6 && windSpeed <= 11) {
+          windSpeedValue = 2;
+        } else if (windSpeed >= 12 && windSpeed <= 19) {
+          windSpeedValue = 3;
+        }else if (windSpeed >= 20 && windSpeed <= 28) {
+          windSpeedValue = 4;
+        }else if (windSpeed >= 29 && windSpeed <= 38) {
+          windSpeedValue = 5;
+        }else if (windSpeed >= 39 && windSpeed <= 49) {
+          windSpeedValue = 6;
+        }else if (windSpeed >= 50 && windSpeed <= 61) {
+          windSpeedValue = 7;
+        }else if (windSpeed >= 62 && windSpeed <= 74) {
+          windSpeedValue = 8;
+        }else if (windSpeed >= 75 && windSpeed <= 88) {
+          windSpeedValue = 9;
+        }else if (windSpeed >= 89 && windSpeed <= 102) {
+          windSpeedValue = 10;
+        }else if (windSpeed >= 103 && windSpeed <= 117) {
+          windSpeedValue = 11;
+        }else {
+          windSpeedValue = -1; // else value
+        }
+
+        station.latestWindSpeedValue = windSpeedValue;
+//
+        // Assign wind compass direction
+        double windDirection = station.latestWindDirection;
+        String windCompass = null;
+
+        if (windDirection  < 11.25) {
+          windCompass = "N";
+        }else if (windDirection >= 348.75) {
+          windCompass = "N";
+        } else if (windDirection < 33.75) {
+          windCompass = "NNE";
+        } else if (windDirection  < 56.25) {
+          windCompass = "NE";
+        } else if (windDirection  < 78.75) {
+          windCompass = "ENE";
+        } else if (windDirection  < 101.25) {
+          windCompass = "E";
+        }else if (windDirection  < 123.75) {
+          windCompass = "ESE";
+        }else if (windDirection  < 146.25) {
+          windCompass = "SE";
+        }else if (windDirection  < 168.75) {
+          windCompass = "SSE";
+        }else if (windDirection  < 191.25) {
+          windCompass = "S";
+        }else if (windDirection  < 213.75) {
+          windCompass = "SSW";
+        }else if (windDirection  < 236.25) {
+          windCompass = "SW";
+        }else if (windDirection  < 258.75) {
+          windCompass = "WSW";
+        }else if (windDirection < 281.25) {
+          windCompass = "W";
+        }else if (windDirection  < 303.75) {
+          windCompass = "WNW";
+        }else if (windDirection < 326.25) {
+          windCompass = "NW";
+        }else if (windDirection  < 348.75) {
+          windCompass = "NW";
+        }else {
+          windCompass = "";
+        }
+
+        station.windCompass = windCompass;
+//
+
       }
+
     }
 
     render("dashboard.html", stations, member);

@@ -80,7 +80,7 @@ Station(s2):
     - r5
     - r6
 Station(s3):
-  name: Kilkenny,
+  name: Kilkenny
   longitude: 11.44
   latitude: 33.56
   readings:

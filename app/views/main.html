@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../public/stylesheets/main.css">
 </head>
 <body >
-<div class="hero is-info is-small">
+<div class="hero is-info is-small header-class" >
     <div class="hero-body ">
         <div class="container header-wrapper">
             <p class="title ">
@@ -27,12 +27,12 @@
 <div class="nav">
     <nav class="navbar is-info container box" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a href="/member">
+            <a class="member" href="/member">
                 #{if member}
                 Welcome ${member.firstname}
                 #{/if}
                 #{else}
-                Please log in
+                <a href="/login">Please log in</a>
                 #{/else}
 
             </a>

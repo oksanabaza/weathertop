@@ -2,59 +2,59 @@
 #{set title:'login' /}
 #{welcomemenu id:"login"/}
 <section class="content box container">
-    <div class="columns container">
-        <div class="column is-half">
-            <form action="/authenticate" method="POST">
-                <h3 class="subtitle">Log-in</h3>
-                <div class="field">
-                    <label class="label">Email</label>
-                    <input class="input" placeholder="Email" name="email">
-                </div>
-                <div class="field">
-                    <label class="label">Password</label>
-                    <input class="input" type="password" name="password">
-                </div>
-                <button class="button is-link is-info">Login</button>
-            </form>
-        </div>
-        <div class="column is-half">
-            <figure class="image is-square">
-                <img src="/public/images/todo-1.png">
-            </figure>
-        </div>
-    </div>
-<!--    <div class="login-wrapper">-->
-<!--        <div class="login-title">-->
-<!--            Login Page-->
-<!--        </div>-->
-<!--        <div class="login-card">-->
+<!--    <div class="columns container">-->
+<!--        <div class="column is-half">-->
 <!--            <form action="/authenticate" method="POST">-->
+<!--                <h3 class="subtitle">Log-in</h3>-->
 <!--                <div class="field">-->
-<!--                    <label class="label">Username</label>-->
-<!--                    <div class="control">-->
-<!--                        <input class="input" placeholder="Email" name="email">-->
-<!--                    </div>-->
+<!--                    <label class="label">Email</label>-->
+<!--                    <input class="input" placeholder="Email" name="email">-->
 <!--                </div>-->
 <!--                <div class="field">-->
 <!--                    <label class="label">Password</label>-->
-<!--                    <div class="control">-->
-<!--                        <input class="input" type="password" name="password placeholder="Enter your password">-->
-<!--                    </div>-->
+<!--                    <input class="input" type="password" name="password">-->
 <!--                </div>-->
-<!--                <div class="field">-->
-<!--                    <div class="control signup-footer">-->
-<!--                        <button class="button is-link is-info">Login</button>-->
-
-<!--                    </div>-->
-
-<!--                </div>-->
+<!--                <button class="button is-link is-info">Login</button>-->
 <!--            </form>-->
-<!--            <div class="form-divider">-->
-<!--                <span>or</span>-->
-<!--            </div>-->
-<!--            <div class="login-footer">-->
-<!--                Don't have an account? <a href="/signup">Sign up</a>-->
-<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="column is-half">-->
+<!--            <figure class="image is-square">-->
+<!--                <img src="/public/images/todo-1.png">-->
+<!--            </figure>-->
 <!--        </div>-->
 <!--    </div>-->
+    <div class="login-wrapper">
+        <div class="login-title">
+            Login Page
+        </div>
+        <div class="login-card">
+            <form action="/authenticate" method="POST">
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control">
+                        <input class="input" placeholder="Email" name="email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="password" name="password" placeholder="Enter your password">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control signup-footer">
+                        <button class="button is-link is-info">Login</button>
+
+                    </div>
+
+                </div>
+            </form>
+            <div class="form-divider">
+                <span>or</span>
+            </div>
+            <div class="login-footer">
+                Don't have an account? <a href="/signup">Sign up</a>
+            </div>
+        </div>
+    </div>
 </section>
