@@ -80,6 +80,44 @@
                     </div>
                     <div class="card-bottom">
                         <div>
+                    <div>${station.latestWindSpeed} km/h</div>
+                            <div class="wind-info">
+                                #{if station.latestWindSpeedValue == 1}
+                                <div>Calm</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 2}
+                                <div>Light Air</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 3}
+                                <div>Light Breeze</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 4}
+                                <div>Moderate Breeze</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 5}
+                                <div>Fresh Breeze</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 6}
+                                <div>Strong Breeze</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 7}
+                                <div>Near Gale</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 8}
+                                <div>Gale</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 9}
+                                <div>Severe Gale</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 10}
+                                <div>Strong Storm</div>
+                                #{/if}
+                                #{if station.latestWindSpeedValue == 11}
+                                <div>Violent Storm</div>
+                                #{/if}
+                                #{else}
+                                #{/else}
+                            </div>
                     <div>Max: ${station.maxWindSpeed}</div>
                     <div>Min: ${station.minWindSpeed}</div>
                         </div>

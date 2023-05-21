@@ -112,7 +112,41 @@ public class Dashboard extends Controller
         station.latestWindSpeed = readings.get(lastItem).windSpeed;
         station.latestWindDirection = readings.get(lastItem).windDirection;
 
+//
+        // Apply windSpeed value based on conditions
+        double windSpeed = station.latestWindSpeed;
+        int windSpeedValue = 0; // Default value
 
+        if (windSpeed == 1) {
+          windSpeedValue = 0;
+        } else if (windSpeed >= 1 && windSpeed <= 5) {
+          windSpeedValue = 1;
+        } else if (windSpeed >= 6 && windSpeed <= 11) {
+          windSpeedValue = 2;
+        } else if (windSpeed >= 12 && windSpeed <= 19) {
+          windSpeedValue = 3;
+        }else if (windSpeed >= 20 && windSpeed <= 28) {
+          windSpeedValue = 4;
+        }else if (windSpeed >= 29 && windSpeed <= 38) {
+          windSpeedValue = 5;
+        }else if (windSpeed >= 39 && windSpeed <= 49) {
+          windSpeedValue = 6;
+        }else if (windSpeed >= 50 && windSpeed <= 61) {
+          windSpeedValue = 7;
+        }else if (windSpeed >= 62 && windSpeed <= 74) {
+          windSpeedValue = 8;
+        }else if (windSpeed >= 75 && windSpeed <= 88) {
+          windSpeedValue = 9;
+        }else if (windSpeed >= 89 && windSpeed <= 102) {
+          windSpeedValue = 10;
+        }else if (windSpeed >= 103 && windSpeed <= 117) {
+          windSpeedValue = 11;
+        }else {
+          windSpeedValue = -1; // Default value
+        }
+
+        station.latestWindSpeedValue = windSpeedValue;
+//
       }
 
     }
