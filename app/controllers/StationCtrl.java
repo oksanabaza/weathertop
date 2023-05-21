@@ -26,12 +26,12 @@ public class StationCtrl extends Controller
         reading.delete();
         render("station.html", station);
     }
-    public static void addReading(Long id, int code, int temperature, int windSpeed, int windDirection, int pressure) {
+    public static void addReading(Long id, int code, int temperature, double windSpeed, double windDirection, int pressure) {
         // Remove milliseconds from the current time
         Date date = new Date();
         date.setTime(date.getTime() / 1000L * 1000L);
 
-        int fTemperature = temperature * 9/5 +32;
+        double fTemperature = temperature * 9.0 / 5.0 + 32.0;
 
 
         Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure, date);

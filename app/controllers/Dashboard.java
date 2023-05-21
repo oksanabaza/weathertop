@@ -62,7 +62,7 @@ public class Dashboard extends Controller
       double maxTemperature = 00.00;
       double minTemperature = 00.00;
       double maxWindSpeed = 00.00;
-      int minWindSpeed = 0;
+      double minWindSpeed = 00.00;
       double maxPressure = 00.00;
       double minPressure = 00.00;
 
@@ -96,7 +96,7 @@ public class Dashboard extends Controller
       station.maxTemperature = maxTemperature;
       station.minTemperature = minTemperature;
       station.maxWindSpeed = (int) maxWindSpeed;
-      station.minWindSpeed = minWindSpeed;
+      station.minWindSpeed = (int) minWindSpeed;
       station.maxPressure = maxPressure;
       station.minPressure = minPressure;
 
@@ -158,37 +158,39 @@ public class Dashboard extends Controller
         double windDirection = station.latestWindDirection;
         String windCompass = null;
 
-        if (windDirection >= 348.75 || windDirection < 11.25) {
+        if (windDirection  < 11.25) {
           windCompass = "N";
-        } else if (windDirection >= 11.25 || windDirection < 33.75) {
+        }else if (windDirection >= 348.75) {
+          windCompass = "N";
+        } else if (windDirection < 33.75) {
           windCompass = "NNE";
-        } else if (windDirection >= 33.75 || windDirection < 56.25) {
+        } else if (windDirection  < 56.25) {
           windCompass = "NE";
-        } else if (windDirection >= 56.25 || windDirection < 78.75) {
+        } else if (windDirection  < 78.75) {
           windCompass = "ENE";
-        } else if (windDirection >= 78.75 || windDirection < 101.25) {
+        } else if (windDirection  < 101.25) {
           windCompass = "E";
-        }else if (windDirection >= 101.25 || windDirection < 123.75) {
+        }else if (windDirection  < 123.75) {
           windCompass = "ESE";
-        }else if (windDirection >= 123.75 || windDirection < 146.25) {
+        }else if (windDirection  < 146.25) {
           windCompass = "SE";
-        }else if (windDirection >= 146.25 || windDirection < 168.75) {
+        }else if (windDirection  < 168.75) {
           windCompass = "SSE";
-        }else if (windDirection >= 168.75 || windDirection < 191.25) {
+        }else if (windDirection  < 191.25) {
           windCompass = "S";
-        }else if (windDirection >= 191.25 || windDirection < 213.75) {
+        }else if (windDirection  < 213.75) {
           windCompass = "SSW";
-        }else if (windDirection >= 213.75 || windDirection < 236.25) {
+        }else if (windDirection  < 236.25) {
           windCompass = "SW";
-        }else if (windDirection >= 236.25 || windDirection < 258.75) {
+        }else if (windDirection  < 258.75) {
           windCompass = "WSW";
-        }else if (windDirection >= 258.75 || windDirection < 281.25) {
+        }else if (windDirection < 281.25) {
           windCompass = "W";
-        }else if (windDirection >= 281.25 || windDirection < 303.75) {
+        }else if (windDirection  < 303.75) {
           windCompass = "WNW";
-        }else if (windDirection >= 303.75 || windDirection < 326.25) {
+        }else if (windDirection < 326.25) {
           windCompass = "NW";
-        }else if (windDirection >= 326.25 || windDirection < 348.75) {
+        }else if (windDirection  < 348.75) {
           windCompass = "NW";
         }else {
           windCompass = "";

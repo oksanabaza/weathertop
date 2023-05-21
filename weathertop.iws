@@ -6,13 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="35f6b079-199a-4db3-ad9b-4c07281287b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Template_1003$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1003$_run_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template_1009$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1009$_run_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template_1009.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1009.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/StationCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/StationCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Reading.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Reading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Station.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tags/addreading.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/addreading.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_addreading.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_addreading.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Dashboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.StationCtrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.StationCtrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Reading" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Reading" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Station" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Station" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/StationCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/StationCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Reading.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Reading.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Station.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weathertop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weathertop.iws" afterDir="false" />
     </list>

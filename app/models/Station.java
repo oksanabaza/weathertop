@@ -31,8 +31,8 @@ public class Station extends Model
     public int latestCode;
     public int latestPressure;
     public int latestWindSpeed;
-    public int latestWindDirection;
-    public int latestWindSpeedValue;
+    public double latestWindDirection;
+    public double latestWindSpeedValue;
     public double windChill;
     public String windCompass;
 
