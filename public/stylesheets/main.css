@@ -71,7 +71,17 @@ footer {
 .hero.is-info .title {
 	color: #faa41a;
 }
-
+.hero.is-info.is-small {
+	color: #faa41a;
+	background-color:  #f5f5f5;
+}
+.header-wrapper{
+background-color:  #302850;
+}
+.button.is-info {
+    background-color: #3e8ed0;
+    color: black;
+}
 body {
 	background-color: #f5f5f5;
 }
@@ -254,4 +264,13 @@ a#about.navbar-item.is-active {
 }
 .weather-icon img{
     width: 30%;
+}
+
+#add-station button{
+    color: #302850;
+    background-color: #faa41a;
+}
+#add-reading button{
+    color: #302850;
+    background-color: #faa41a;
 }
