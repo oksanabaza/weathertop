@@ -21,6 +21,9 @@ background-color:#302850;
 color: #faa41a;
 background-color:#302850;
 }
+.navbar-brand{
+align-items: center;
+}
 #navbarMenu a{
 color: #faa41a;
 background-color:#302850;
