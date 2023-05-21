@@ -16,7 +16,7 @@
         <div class="container header-wrapper">
             <p class="title ">
 
-                Welcome to the WeatherTop
+                WeatherTop
 
             </p>
 
@@ -25,11 +25,11 @@
 </div>
 #{if member}
 <div class="nav">
-    <nav class="navbar is-info container" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-info container box" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a href="/member">
                 #{if member}
-                ${member.firstname}
+                Welcome ${member.firstname}
                 #{/if}
                 #{else}
                 Please log in
@@ -46,10 +46,10 @@
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
 
-                <a id="admin" class="navbar-item" href="/admin">Admin</a>
-                <a id="dashboard" class="navbar-item" href="/dashboard">Dashboard</a>
-                <a id="about" class="navbar-item" href="/about">About</a>
-                <a id="logout" class="navbar-item" href="/logout">Logout</a>
+                <a id="admin"  class="navbar-item #{if request.path == '/admin'}is-active#{/if}" href="/admin">Admin</a>
+                <a id="dashboard" class="navbar-item #{if request.path == '/dashboard'}is-active#{/if}" href="/dashboard">Dashboard</a>
+                <a id="about"  class="navbar-item #{if request.path == '/about'}is-active#{/if}" href="/about">About</a>
+                <a id="logout"  class="navbar-item" href="/logout">Logout</a>
             </div>
         </div>
     </nav>
@@ -60,7 +60,7 @@
 #{/else}
 
 
-<section class="">
+<section class="main-content">
 
     #{doLayout /}
 </section>
