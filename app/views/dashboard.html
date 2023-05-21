@@ -80,7 +80,6 @@
                     </div>
                     <div class="card-bottom">
                         <div>
-
                             <div class="wind-info">
                                 #{if station.latestWindSpeedValue == 1}
                                 <div>Calm</div>
@@ -114,6 +113,58 @@
                                 #{/if}
                                 #{if station.latestWindSpeedValue == 11}
                                 <div>Violent Storm</div>
+                                #{/if}
+                                #{else}
+                                #{/else}
+                            </div>
+                            <div>
+                                #{if station.windCompass == 'N'}
+                                <div>North</div>
+                                #{/if}
+                                #{if station.windCompass == 'NNE'}
+                                <div>North North East</div>
+                                #{/if}
+                                #{if station.windCompass == 'NE'}
+                                <div>North East</div>
+                                #{/if}
+                                #{if station.windCompass == 'ENE'}
+                                <div>East North East</div>
+                                #{/if}
+                                #{if station.windCompass == 'E'}
+                                <div>East</div>
+                                #{/if}
+                                #{if station.windCompass == 'ESE'}
+                                <div>East South East</div>
+                                #{/if}
+                                #{if station.windCompass == 'SE'}
+                                <div>South East</div>
+                                #{/if}
+                                #{if station.windCompass == 'SSE'}
+                                <div>South South East</div>
+                                #{/if}
+                                #{if station.windCompass == 'S'}
+                                <div>South</div>
+                                #{/if}
+                                #{if station.windCompass == 'SSW'}
+                                <div>South South West</div>
+                                #{/if}
+                                #{if station.windCompass == 'SW'}
+                                <div>South West</div>
+                                #{/if}
+                                #{if station.windCompass == 'WSW'}
+                                <div>West South West</div>
+                                #{/if}
+                                #{if station.windCompass == 'W'}
+                                <div>West</div>
+                                #{/if}
+                                #{if station.windCompass == 'WNW'}
+                                <div>West North West</div>
+                                #{/if}
+                                #{if station.windCompass == 'NW'}
+                                <div>North West</div>
+                                #{/if}
+                                #{if station.windCompass == 'NNW'}
+                                <div>North North West</div>
                                 #{/if}
                                 #{else}
                                 #{/else}

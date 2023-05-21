@@ -34,6 +34,7 @@ public class Station extends Model
     public int latestWindDirection;
     public int latestWindSpeedValue;
     public double windChill;
+    public String windCompass;
 
 
     public Station(String name, double latitude, double longitude)
@@ -58,6 +59,7 @@ public class Station extends Model
         this.latestWindDirection = latestWindDirection;
         this.latestWindSpeedValue = latestWindSpeedValue;
         this.windChill = windChill;
+        this.windCompass = windCompass;
 
     }
 

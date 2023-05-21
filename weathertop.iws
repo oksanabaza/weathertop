@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="35f6b079-199a-4db3-ad9b-4c07281287b5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Template_1003$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1003$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template_1003.class" beforeDir="false" afterPath="$PROJECT_DIR$/Template_1003.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Station.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboard.html" afterDir="false" />
