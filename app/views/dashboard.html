@@ -80,7 +80,7 @@
                     </div>
                     <div class="card-bottom">
                         <div>
-                    <div>${station.latestWindSpeed} km/h</div>
+
                             <div class="wind-info">
                                 #{if station.latestWindSpeedValue == 1}
                                 <div>Calm</div>
@@ -118,6 +118,8 @@
                                 #{else}
                                 #{/else}
                             </div>
+                            <div>Feels like:</div>
+                    <div>${station.windChill}</div>
                     <div>Max: ${station.maxWindSpeed}</div>
                     <div>Min: ${station.minWindSpeed}</div>
                         </div>

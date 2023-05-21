@@ -62,13 +62,13 @@ public class Dashboard extends Controller
       double maxTemperature = 00.00;
       double minTemperature = 00.00;
       double maxWindSpeed = 00.00;
-      double minWindSpeed = 00.00;
+      int minWindSpeed = 0;
       double maxPressure = 00.00;
       double minPressure = 00.00;
 
       for (Reading reading : readings) {
         double temperature = reading.temperature;
-        double windSpeed = reading.windSpeed;
+        int windSpeed = (int) reading.windSpeed;
         double pressure = reading.pressure;
 
         if (temperature > maxTemperature) {
@@ -95,7 +95,7 @@ public class Dashboard extends Controller
 
       station.maxTemperature = maxTemperature;
       station.minTemperature = minTemperature;
-      station.maxWindSpeed = maxWindSpeed;
+      station.maxWindSpeed = (int) maxWindSpeed;
       station.minWindSpeed = minWindSpeed;
       station.maxPressure = maxPressure;
       station.minPressure = minPressure;
@@ -109,13 +109,20 @@ public class Dashboard extends Controller
         station.fLatestTemperature = station.latestTemperature * 9 / 5 + 32;
         station.latestCode = readings.get(lastItem).code;
         station.latestPressure = readings.get(lastItem).pressure;
-        station.latestWindSpeed = readings.get(lastItem).windSpeed;
+        station.latestWindSpeed = (int) readings.get(lastItem).windSpeed;
         station.latestWindDirection = readings.get(lastItem).windDirection;
+        // Calculate wind chill with rounded result
+        double windChill = 13.12 + 0.6215 * station.latestTemperature - 11.37 * Math.pow(station.latestWindSpeed, 0.16) + 0.3965 * station.latestTemperature * Math.pow(station.latestWindSpeed, 0.16);
 
-//
+        // Round wind chill to 2 decimal places
+        double roundedWindChill = Math.round(windChill * 100.0) / 100.0;
+
+        // Assign rounded wind chill to station
+        station.windChill = roundedWindChill;
+
         // Apply windSpeed value based on conditions
-        double windSpeed = station.latestWindSpeed;
-        int windSpeedValue = 0; // Default value
+        int windSpeed = station.latestWindSpeed;
+        int windSpeedValue = 0;
 
         if (windSpeed == 1) {
           windSpeedValue = 0;
@@ -142,11 +149,12 @@ public class Dashboard extends Controller
         }else if (windSpeed >= 103 && windSpeed <= 117) {
           windSpeedValue = 11;
         }else {
-          windSpeedValue = -1; // Default value
+          windSpeedValue = -1; // else value
         }
 
         station.latestWindSpeedValue = windSpeedValue;
-//
+
+
       }
 
     }
