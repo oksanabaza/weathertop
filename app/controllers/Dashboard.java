@@ -59,12 +59,12 @@ public class Dashboard extends Controller
       }
 
       // Find maximum and minimum values for temperature, wind speed, and pressure
-      double maxTemperature = Double.MIN_VALUE;
-      double minTemperature = Double.MAX_VALUE;
-      double maxWindSpeed = Double.MIN_VALUE;
-      double minWindSpeed = Double.MAX_VALUE;
-      double maxPressure = Double.MIN_VALUE;
-      double minPressure = Double.MAX_VALUE;
+      double maxTemperature = 00.00;
+      double minTemperature = 00.00;
+      double maxWindSpeed = 00.00;
+      double minWindSpeed = 00.00;
+      double maxPressure = 00.00;
+      double minPressure = 00.00;
 
       for (Reading reading : readings) {
         double temperature = reading.temperature;
