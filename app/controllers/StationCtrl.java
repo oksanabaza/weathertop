@@ -24,7 +24,7 @@ public class StationCtrl extends Controller
         station.readings.remove(reading);
         station.save();
         reading.delete();
-        render("station.html", station);
+        redirect("/stations/" + id);
     }
     public static void addReading(Long id, int code, double temperature, double windSpeed, double windDirection, int pressure) {
         // Remove milliseconds from the current time

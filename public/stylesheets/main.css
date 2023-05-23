@@ -272,6 +272,15 @@ a#about.navbar-item.is-active {
     color: #302850;
     background-color: #faa41a;
 }
-.navbar-brand a{
-    color:#302850;
+.navbar-brand:hover{
+    color:  #faa41a;
+    background-color: #302850;
+}
+.member-submit-btn{
+        color:  #302850;
+        background-color: #faa41a;
+}
+.member-submit-btn:hover{
+        color:  #faa41a;
+        background-color: #302850;
 }
