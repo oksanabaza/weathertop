@@ -272,6 +272,7 @@ a#about.navbar-item.is-active {
     color: #302850;
     background-color: #faa41a;
 }
+
 .navbar-brand:hover{
     color:  #faa41a;
     background-color: #302850;
@@ -284,3 +285,4 @@ a#about.navbar-item.is-active {
         color:  #faa41a;
         background-color: #302850;
 }
+
