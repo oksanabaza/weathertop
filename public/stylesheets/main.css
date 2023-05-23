@@ -275,3 +275,7 @@ a#about.navbar-item.is-active {
 .navbar-brand a{
     color:#302850;
 }
+.navbar-brand:hover{
+    color:  #faa41a;
+    background-color: #302850;
+}
