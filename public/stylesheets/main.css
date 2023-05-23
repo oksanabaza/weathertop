@@ -272,5 +272,6 @@ a#about.navbar-item.is-active {
     color: #302850;
     background-color: #faa41a;
 }
-.is-active{
-color:red;}
+.navbar-brand a{
+    color:#faa41a;
+}
