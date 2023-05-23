@@ -1,25 +1,25 @@
 <div class="nav">
-<nav class="navbar is-info is-inverted container" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-<!--        <a id="start" class="navbar-item" href="/">Weathertop App</a>-->
-        <div>
-            #{if member}
-            hello ${member.firstname}
-            #{/if}
-            #{else}
-            <a href="/login">Please log in</a>
+    <nav class="navbar is-info is-inverted container" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!--        <a id="start" class="navbar-item" href="/">Weathertop App</a>-->
+            <div>
+                #{if member}
+                hello ${member.firstname}
+                #{/if}
+                #{else}
+                <a href="/login">Please log in</a>
 
-            #{/else}
+                #{/else}
+            </div>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-end">
-            <a id="signup" class="navbar-item" href="/signup">
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a id="signup" class="navbar-item" href="/signup">
                   <span class="icon">
         <i class="fas fa-user-plus"></i>
             <a id="login" class="navbar-item" href="/login">
@@ -28,26 +28,28 @@
                          <i class="fas fa-sign-in-alt"></i>
                      </span>
             </a>
+
+            </div>
         </div>
-    </div>
 
 
-</nav>
+    </nav>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+     document.addEventListener('DOMContentLoaded', () => {
+    // Get all "navbar-burger" elements
+    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-end'), 0);
 
-        if ($navbarBurgers.length > 0) {
-            $navbarBurgers.forEach($el => {
-                $el.addEventListener('click', () => {
-                    const target = $el.dataset.target;
-                    const $target = document.getElementById(target);
+    // Add click event listener on each "navbar-burger" element
+    navbarBurgers.forEach((el) => {
+      el.addEventListener('click', () => {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        const target = el.dataset.target;
+        const targetElement = document.getElementById(target);
 
-                    $el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
+        el.classList.toggle('is-active');
+        targetElement.classList.toggle('is-active');
+      });
     });
+  });
 </script>

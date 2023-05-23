@@ -31,9 +31,7 @@ a:hover {
 	padding: 0.5rem 0.75rem;
 }
 
-.navbar-brand:hover {
-	background-color: #faa41a;
-}
+
 
 .nav {
 	margin-bottom: 30px;
@@ -274,3 +272,5 @@ a#about.navbar-item.is-active {
     color: #302850;
     background-color: #faa41a;
 }
+.is-active{
+color:red;}
